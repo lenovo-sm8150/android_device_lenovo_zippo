@@ -136,7 +136,6 @@ lib/libstagefright_softomx.so
 
 # RIL
 etc/permissions/privapp-permissions-qti.xml
-etc/permissions/qti_libpermissions.xml|445f784e5cf0a21717dadb36a3f17af75a3af02f
 etc/permissions/qti_permissions.xml
 etc/sysconfig/qti_whitelist.xml
 -product/app/QtiTelephonyService/QtiTelephonyService.apk
