@@ -73,9 +73,9 @@ vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 
 # ANT+ (system)
 product/lib/com.qualcomm.qti.ant@1.0.so
--lib/libantradio.so
 product/lib64/com.qualcomm.qti.ant@1.0.so
--lib64/libantradio.so
+-system/lib/libantradio.so
+-system/lib64/libantradio.so
 
 # ANT+ (vendor)
 vendor/lib/hw/com.qualcomm.qti.ant@1.0-impl.so
@@ -543,7 +543,6 @@ product/etc/permissions/com.qti.dpmframework.xml
 product/etc/permissions/dpmapi.xml
 product/framework/com.qti.dpmframework.jar
 product/framework/dpmapi.jar
-framework/tcmclient.jar
 product/lib/com.qualcomm.qti.dpm.api@1.0.so
 product/lib/libdpmctmgr.so
 product/lib/libdpmfdmgr.so
@@ -553,6 +552,7 @@ product/lib64/libdpmctmgr.so
 product/lib64/libdpmfdmgr.so
 product/lib64/libdpmtcm.so
 -product/priv-app/dpmserviceapp/dpmserviceapp.apk
+system/framework/tcmclient.jar
 vendor/bin/dpmQmiMgr
 vendor/etc/init/dpmQmiMgr.rc
 vendor/lib/libdpmqmihal.so
@@ -732,7 +732,7 @@ vendor/lib64/libllvm-glnext.so
 vendor/lib64/libllvm-qcom.so
 vendor/lib64/libOpenCL.so
 
-# Graphics firmware 
+# Graphics firmware
 vendor/firmware/a225_pfp.fw
 vendor/firmware/a225_pm4.fw
 vendor/firmware/a225p5_pm4.fw
@@ -775,7 +775,7 @@ vendor/lib64/libhbtpdsp.so
 vendor/lib64/libhbtpfrmwk.so
 
 # Input
-etc/excluded-input-devices.xml
+system/etc/excluded-input-devices.xml
 
 # IPA Firmware
 vendor/firmware/ipa_fws.b00
@@ -843,13 +843,13 @@ vendor/lib64/libmulawdec.so
 vendor/lib64/libjnihelper.so
 
 # Media
-lib/libFileMux.so
-lib/libmmosal.so
-lib64/libFileMux.so
-lib64/libmmosal.so
-lib64/libOmxMux.so
 product/lib/vendor.qti.hardware.vpp@1.1.so
 product/lib64/vendor.qti.hardware.vpp@1.1.so
+system/lib/libFileMux.so
+system/lib/libmmosal.so
+system/lib64/libFileMux.so
+system/lib64/libmmosal.so
+system/lib64/libOmxMux.so
 vendor/bin/hw/vendor.qti.media.c2@1.0-service
 vendor/bin/vppservice
 vendor/etc/configstore/vpp.configstore.xml
@@ -955,8 +955,8 @@ vendor/lib64/vendor.qti.hardware.factory@1.0.so
 vendor/lib64/vendor.qti.hardware.factory@1.1.so
 
 # Qualcomm MSM Interface
-etc/permissions/qti_libpermissions.xml|445f784e5cf0a21717dadb36a3f17af75a3af02f
-etc/permissions/qti_permissions.xml
+system/etc/permissions/qti_libpermissions.xml|445f784e5cf0a21717dadb36a3f17af75a3af02f
+system/etc/permissions/qti_permissions.xml
 vendor/bin/irsc_util
 vendor/bin/pd-mapper
 vendor/lib/libdiag.so
@@ -1009,15 +1009,15 @@ vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
 -product/app/QtiTelephonyService/QtiTelephonyService.apk
 -vendor/app/IWlanService/IWlanService.apk
 product/etc/permissions/embms.xml
-etc/permissions/privapp-permissions-qti.xml
 product/etc/permissions/qcrilhook.xml
 product/etc/permissions/telephonyservice.xml
 product/etc/permissions/telephony_product_privapp-permissions-qti.xml
-etc/sysconfig/qti_whitelist.xml
 product/framework/embmslibrary.jar
 product/framework/qcrilhook.jar
 product/framework/QtiTelephonyServicelibrary.jar
 -product/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+system/etc/permissions/privapp-permissions-qti.xml
+system/etc/sysconfig/qti_whitelist.xml
 vendor/bin/hw/qcrild
 vendor/bin/adpl
 vendor/bin/ATFWD-daemon
@@ -1117,7 +1117,6 @@ product/etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml
 product/etc/permissions/com.qualcomm.qti.imscmservice-V2.2-java.xml
 product/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml|75e8a824d368cd4172985c884796381327d950da
 product/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml|620c9fa0047bb681e918af2d1e7a98c648f45fb7
-etc/permissions/com.qualcomm.qti.imscmservice.xml
 product/framework/com.qualcomm.qti.imscmservice-V2.0-java.jar
 product/framework/com.qualcomm.qti.imscmservice-V2.1-java.jar
 product/framework/com.qualcomm.qti.imscmservice-V2.2-java.jar
@@ -1130,11 +1129,8 @@ product/lib/lib-imsvideocodec.so
 product/lib/lib-imsvt.so
 product/lib/lib-imsvtextutils.so
 product/lib/lib-imsvtutils.so
-lib/libdiag_system.so
 product/lib/libimscamera_jni.so
 product/lib/libimsmedia_jni.so
-lib/libmmrtpdecoder.so
-lib/libmmrtpencoder.so
 vendor/lib/librcc.so
 product/lib/vendor.qti.hardware.radio.ims@1.0.so
 product/lib/vendor.qti.hardware.radio.ims@1.1.so
@@ -1154,11 +1150,8 @@ product/lib64/lib-imsvideocodec.so
 product/lib64/lib-imsvt.so
 product/lib64/lib-imsvtextutils.so
 product/lib64/lib-imsvtutils.so
-lib64/libdiag_system.so
 product/lib64/libimscamera_jni.so
 product/lib64/libimsmedia_jni.so
-lib64/libmmrtpdecoder.so
-lib64/libmmrtpencoder.so
 vendor/lib64/librcc.so
 product/lib64/vendor.qti.hardware.radio.ims@1.0.so
 product/lib64/vendor.qti.hardware.radio.ims@1.1.so
@@ -1169,6 +1162,13 @@ product/lib64/vendor.qti.ims.callinfo@1.0.so
 product/lib64/vendor.qti.ims.rcsconfig@1.0.so
 product/lib64/vendor.qti.imsrtpservice@2.0.so
 product/lib64/vendor.qti.imsrtpservice@2.1.so
+system/etc/permissions/com.qualcomm.qti.imscmservice.xml
+system/lib/libdiag_system.so
+system/lib/libmmrtpdecoder.so
+system/lib/libmmrtpencoder.so
+system/lib64/libdiag_system.so
+system/lib64/libmmrtpdecoder.so
+system/lib64/libmmrtpencoder.so
 vendor/bin/ims_rtp_daemon
 vendor/bin/imsdatadaemon
 vendor/bin/imsqmidaemon
@@ -1339,9 +1339,9 @@ vendor/lib64/vendor.qti.hardware.scve.objecttracker@1.0.so
 vendor/lib64/vendor.qti.hardware.scve.panorama@1.0.so
 
 # Soter
--app/SoterService/SoterService.apk
 product/framework/vendor.qti.hardware.soter-V1.0-java.jar
 product/lib64/vendor.qti.hardware.soter@1.0.so
+-system/app/SoterService/SoterService.apk
 vendor/bin/hw/vendor.qti.hardware.soter@1.0-service
 vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
@@ -1375,7 +1375,6 @@ vendor/lib64/libaoa.so
 vendor/firmware/bdwlan_zippo.bin
 
 # WiFi Display - from qssi_NX627J-user-11-RKQ1.200826.002-nubia.20201029.204053-release-keys
--framework/WfdCommon.jar|aa7470dd5ccb2e2c695fd54c3aff01d21e2d7472
 system_ext/bin/wfdservice|91f6e2d58de9354a694d3b3da6e6d224dd7e47c1
 system_ext/etc/init/wfdservice.rc|aab7aecb01c359fd521c99957c4d5bfd16a8dfae
 system_ext/lib/libmmosal.so|175c890c965a14043777000cd2cfc20264b04810
@@ -1410,6 +1409,7 @@ system_ext/lib64/libwfduibcsinkinterface.so|86477d60d65229e83046a9d60f984a6c8d3c
 system_ext/lib64/libwfduibcsrc.so|f15233e28b2c6faf2272be393e9068898b64bd6b
 system_ext/lib64/libwfduibcsrcinterface.so|b95ff44eeca6d7823acb296bb9a9b15c2a272dfb
 system_ext/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so|6810d41bb161d6fd1ea74317ecf7924a44eeb8f6
+-system/framework/WfdCommon.jar|aa7470dd5ccb2e2c695fd54c3aff01d21e2d7472
 vendor/bin/wfdvndservice|1a8d7363ef8e1d1c9b719d4d55762f17fcc3a5f9
 vendor/bin/wifidisplayhalservice|6d3d6471959dcd32100a0748518b93ad748399f8
 vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc|576ce4393b7746b77a230745aa9e9ee3bd31b17d
