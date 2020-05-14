@@ -32,10 +32,6 @@ system/etc/cne/Nexus/ATT/ATT_profiles.xml
 system/etc/cne/Nexus/ROW/ROW_profiles.xml
 system/etc/cne/Nexus/VZW/VZW_profiles.xml
 
-# Configstore
--vendor/lib/libplatformconfig.so
--vendor/lib64/libplatformconfig.so
-
 # DPM
 product/bin/dpmd
 product/etc/dpm/dpm.conf
