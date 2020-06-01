@@ -15,7 +15,7 @@
 #
 
 # Release name
-PRODUCT_RELEASE_NAME := ASUS_I01WD
+PRODUCT_RELEASE_NAME := I01WD
 
 $(call inherit-product, build/target/product/embedded.mk)
 
@@ -26,10 +26,10 @@ $(call inherit-product, vendor/omni/config/common.mk)
 $(call inherit-product, device/asus/ASUS_I01WD/device.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := ASUS_I01WD
-PRODUCT_NAME := omni_ASUS_I01WD
+PRODUCT_DEVICE := I01WD
+PRODUCT_NAME := omni_I01WD
 PRODUCT_BRAND := asus
-PRODUCT_MODEL := ASUS_I01WD
+PRODUCT_MODEL := I01WD
 PRODUCT_MANUFACTURER := asus
 
 PRODUCT_BUILD_PROP_OVERRIDES += \

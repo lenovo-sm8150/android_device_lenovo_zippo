@@ -22,7 +22,7 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_C_INCLUDES := \
     system/core/base/include \
     system/core/init
-LOCAL_SRC_FILES := init_ASUS_I01WD.cpp
-LOCAL_MODULE := libinit_ASUS_I01WD
+LOCAL_SRC_FILES := init_I01WD.cpp
+LOCAL_MODULE := libinit_I01WD
 
 include $(BUILD_STATIC_LIBRARY)
