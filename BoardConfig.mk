@@ -142,6 +142,5 @@ TW_HAS_EDL_MODE := true
 #TWRP_INCLUDE_LOGCAT := true
 #TARGET_USES_LOGD := true
 
-BOARD_CUSTOM_BOOTIMG_MK := device/asus/I01WD/custombootimg.mk
 LZMA_RAMDISK_TARGETS := recovery
 PLATFORM_VERSION := 16.1.0
