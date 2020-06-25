@@ -118,6 +118,12 @@ service time_daemon /sbin/time_daemon
     disabled
     seclabel u:r:recovery:s0
 
+service vibrator-service /sbin/vendor.qti.hardware.vibrator@1.2-service
+    user root
+    group root
+    disabled
+    seclabel u:r:recovery:s0
+
 # This helps fix ld.config.txt errors from the linker on Android 8.1+
 service ldconfigtxt /sbin/touch /sbin/ld.config.txt
     oneshot
@@ -135,6 +141,7 @@ on init
     start boot-1-0
     start prepdecrypt
     start time_daemon
+    start vibrator-service
     setprop crypto.ready 1
 
 on property:crypto.ready=0
