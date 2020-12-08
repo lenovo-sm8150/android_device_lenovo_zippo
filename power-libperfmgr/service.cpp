@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.hardware.power@1.3-service.lenovo-libperfmgr"
+#define LOG_TAG "android.hardware.power@1.3-service.lenovo_zippo-libperfmgr"
 
 #include <android/log.h>
 #include <hidl/HidlTransportSupport.h>
