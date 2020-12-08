@@ -1,5 +1,5 @@
 //
-// Copyright (C) 2018 The LineageOS Project
+// Copyright (C) 2018-2020 The LineageOS Project
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,8 +16,8 @@
 cc_binary {
     relative_install_path: "hw",
     defaults: ["hidl_defaults"],
-    name: "android.hardware.light@2.0-service.lenovo",
-    init_rc: ["android.hardware.light@2.0-service.lenovo.rc"],
+    name: "android.hardware.light@2.0-service.lenovo_zippo",
+    init_rc: ["android.hardware.light@2.0-service.lenovo_zippo.rc"],
     srcs: ["service.cpp", "Light.cpp"],
     shared_libs: [
         "libbase",
