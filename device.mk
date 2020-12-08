@@ -268,7 +268,7 @@ PRODUCT_COPY_FILES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.lenovo
+    android.hardware.light@2.0-service.lenovo_zippo
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
