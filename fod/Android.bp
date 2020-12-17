@@ -16,8 +16,8 @@
 cc_binary {
     relative_install_path: "hw",
     defaults: ["hidl_defaults"],
-    name: "lineage.biometrics.fingerprint.inscreen@1.0-service.lenovo",
-    init_rc: ["lineage.biometrics.fingerprint.inscreen@1.0-service.lenovo.rc"],
+    name: "lineage.biometrics.fingerprint.inscreen@1.0-service.lenovo_zippo",
+    init_rc: ["lineage.biometrics.fingerprint.inscreen@1.0-service.lenovo_zippo.rc"],
     srcs: ["service.cpp", "FingerprintInscreen.cpp"],
     shared_libs: [
         "libbase",

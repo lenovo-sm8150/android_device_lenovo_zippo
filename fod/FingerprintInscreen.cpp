@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "FingerprintInscreenService"
+#define LOG_TAG "lineage.biometrics.fingerprint.inscreen@1.0-service.lenovo_zippo"
 
 #include "FingerprintInscreen.h"
 
