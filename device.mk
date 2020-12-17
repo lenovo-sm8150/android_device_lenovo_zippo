@@ -201,7 +201,7 @@ PRODUCT_COPY_FILES += \
     vendor/revengeos/config/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml:system/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml
 
 PRODUCT_PACKAGES += \
-    lineage.biometrics.fingerprint.inscreen@1.0-service.lenovo_zippo
+    vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.lenovo_zippo
 
 # FM
 PRODUCT_PACKAGES += \
