@@ -481,26 +481,6 @@
         <fqname>@1.0::INxpNfc/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.oneplus.camera.CameraHIDL</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IOnePlusCameraProvider</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IOnePlusCameraProvider/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.oneplus.camera.CameraMDMHIDL</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IOnePlusCameraMDM</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IOnePlusCameraMDM/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.oneplus.fingerprint.extension</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
