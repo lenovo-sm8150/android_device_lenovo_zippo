@@ -16,8 +16,8 @@
 cc_binary {
     relative_install_path: "hw",
     defaults: ["hidl_defaults"],
-    name: "android.hardware.vibrator@1.2-service.oneplus_msmnile",
-    init_rc: ["android.hardware.vibrator@1.2-service.oneplus_msmnile.rc"],
+    name: "android.hardware.vibrator@1.2-service.lenovo_zippo",
+    init_rc: ["android.hardware.vibrator@1.2-service.lenovo_zippo.rc"],
     srcs: ["service.cpp", "Vibrator.cpp"],
     vendor: true,
     cpp_std: "experimental",

@@ -1,5 +1,5 @@
-oneplus_msmnile_sensors_hal_library_static {
-    name: "multihal-oneplus-msmnile",
+lenovo_zippo_sensors_hal_library_static {
+    name: "multihal-lenovo-zippo",
     vendor: true,
     srcs: [
         "multihal.cpp",
@@ -24,7 +24,7 @@ oneplus_msmnile_sensors_hal_library_static {
 }
 
 cc_library_shared {
-    name: "android.hardware.sensors@1.0-impl.oneplus_msmnile",
+    name: "android.hardware.sensors@1.0-impl.lenovo_zippo",
     defaults: ["hidl_defaults"],
     proprietary: true,
     relative_install_path: "hw",
@@ -43,7 +43,7 @@ cc_library_shared {
     ],
     static_libs: [
         "android.hardware.sensors@1.0-convert",
-        "multihal-oneplus-msmnile",
+        "multihal-lenovo-zippo",
     ],
     cflags: [
         "-DNO_INPUT",
@@ -52,11 +52,11 @@ cc_library_shared {
 }
 
 cc_binary {
-    name: "android.hardware.sensors@1.0-service.oneplus_msmnile",
+    name: "android.hardware.sensors@1.0-service.lenovo_zippo",
     defaults: ["hidl_defaults"],
     relative_install_path: "hw",
     vendor: true,
-    init_rc: ["android.hardware.sensors@1.0-service.oneplus_msmnile.rc"],
+    init_rc: ["android.hardware.sensors@1.0-service.lenovo_zippo.rc"],
     srcs: ["service.cpp"],
     shared_libs: [
         "liblog",

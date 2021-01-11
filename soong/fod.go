@@ -9,7 +9,7 @@ import (
 func fodFlags(ctx android.BaseContext) []string {
     var cflags []string
 
-    var config = ctx.AConfig().VendorConfig("ONEPLUS_MSMNILE_FOD")
+    var config = ctx.AConfig().VendorConfig("LENOVO_ZIPPO_FOD")
     var posX = strings.TrimSpace(config.String("POS_X"))
     var posY = strings.TrimSpace(config.String("POS_Y"))
     var size = strings.TrimSpace(config.String("SIZE"))

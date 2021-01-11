@@ -1,4 +1,4 @@
-#define LOG_TAG "sensors-screenshot-oneplus-msmnile"
+#define LOG_TAG "sensors-screenshot-lenovo-zippo"
 #define LOG_NDEBUG 1
 #include <log/log.h>
 #include "screenshot.h"

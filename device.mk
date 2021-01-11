@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2018-2019 The LineageOS Project
+# Copyright (C) 2018-2021 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -7,7 +7,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/oneplus/sm8150-common/sm8150-common-vendor.mk)
+$(call inherit-product-if-exists, vendor/lenovo/zippo/zippo-vendor.mk)
 
 # Additional native libraries
 PRODUCT_COPY_FILES += \
@@ -167,7 +167,7 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-service_64 \
     libxml2 \
     Snap \
-    vendor.oneplus.camera.CameraHIDL@1.0.vendor \
+    vendor.lenovo.camera.CameraHIDL@1.0.vendor \
     vendor.qti.hardware.camera.device@1.0.vendor
 
 # CNE
@@ -236,7 +236,7 @@ PRODUCT_PACKAGES += \
 
 # Doze
 PRODUCT_PACKAGES += \
-    OnePlusDoze
+    lenovoDoze
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -246,10 +246,10 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.oneplus_msmnile \
-    vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.oneplus_msmnile \
-    vendor.oneplus.fingerprint.extension@1.0.vendor \
-    vendor.oneplus.hardware.display@1.0.vendor
+    android.hardware.biometrics.fingerprint@2.1-service.lenovo_zippo \
+    vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.lenovo_zippo \
+    vendor.lenovo.fingerprint.extension@1.0.vendor \
+    vendor.lenovo.hardware.display@1.0.vendor
 
 # For config.fs
 PRODUCT_PACKAGES += \
@@ -308,11 +308,11 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.oneplus_msmnile
+    android.hardware.light@2.0-service.lenovo_zippo
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service.oneplus_msmnile
+    vendor.lineage.livedisplay@2.0-service.lenovo_zippo
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -404,8 +404,8 @@ PRODUCT_COPY_FILES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.sensors@1.0-impl.oneplus_msmnile \
-    android.hardware.sensors@1.0-service.oneplus_msmnile \
+    android.hardware.sensors@1.0-impl.lenovo_zippo \
+    android.hardware.sensors@1.0-service.lenovo_zippo \
     libsensorndkbridge
 
 PRODUCT_COPY_FILES += \
@@ -418,7 +418,7 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    device/oneplus/common
+    device/lenovo/common
 
 # Remove unwanted packages
 PRODUCT_PACKAGES += \
@@ -452,7 +452,7 @@ PRODUCT_PACKAGES += \
 
 # Touch
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.oneplus_msmnile
+    vendor.lineage.touch@1.0-service.lenovo_zippo
 
 # tri-state key
 PRODUCT_PACKAGES += \

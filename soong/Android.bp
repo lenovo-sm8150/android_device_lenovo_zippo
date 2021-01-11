@@ -1,6 +1,6 @@
 bootstrap_go_package {
-    name: "soong-oneplus-msmnile-plugins",
-    pkgPath: "device/oneplus/sm8150-common",
+    name: "soong-lenovo-zippo-plugins",
+    pkgPath: "device/lenovo/zippo",
     deps: [
         "blueprint",
         "blueprint-pathtools",

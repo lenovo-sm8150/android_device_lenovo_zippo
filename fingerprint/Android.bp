@@ -1,7 +1,7 @@
 cc_binary {
-    name: "android.hardware.biometrics.fingerprint@2.1-service.oneplus_msmnile",
+    name: "android.hardware.biometrics.fingerprint@2.1-service.lenovo_zippo",
     defaults: ["hidl_defaults"],
-    init_rc: ["android.hardware.biometrics.fingerprint@2.1-service.oneplus_msmnile.rc"],
+    init_rc: ["android.hardware.biometrics.fingerprint@2.1-service.lenovo_zippo.rc"],
     vendor: true,
     relative_install_path: "hw",
     srcs: [

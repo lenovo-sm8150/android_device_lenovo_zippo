@@ -1,10 +1,6 @@
 [
   {
-    "repository": "android_kernel_oneplus_sm8150",
-    "target_path": "kernel/oneplus/sm8150"
-  },
-  {
-    "repository": "android_device_oneplus_common",
-    "target_path": "device/oneplus/common"
+    "repository": "android_kernel_lenovo_sm8150",
+    "target_path": "kernel/lenovo/sm8150"
   }
 ]

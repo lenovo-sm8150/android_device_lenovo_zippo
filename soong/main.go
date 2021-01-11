@@ -5,6 +5,6 @@ import (
 )
 
 func init() {
-    android.RegisterModuleType("oneplus_msmnile_fod_hal_binary", fodHalBinaryFactory)
-    android.RegisterModuleType("oneplus_msmnile_sensors_hal_library_static", sensorsHalLibraryFactory)
+    android.RegisterModuleType("lenovo_zippo_fod_hal_binary", fodHalBinaryFactory)
+    android.RegisterModuleType("lenovo_zippo_sensors_hal_library_static", sensorsHalLibraryFactory)
 }

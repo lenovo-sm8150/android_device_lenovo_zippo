@@ -9,7 +9,7 @@ import (
 func sensorsFlags(ctx android.BaseContext) []string {
     var cflags []string
 
-    var config = ctx.AConfig().VendorConfig("ONEPLUS_MSMNILE_SENSORS")
+    var config = ctx.AConfig().VendorConfig("LENOVO_ZIPPO_SENSORS")
     var posX = strings.TrimSpace(config.String("ALS_POS_X"))
     var posY = strings.TrimSpace(config.String("ALS_POS_Y"))
 
