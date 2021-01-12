@@ -28,7 +28,6 @@
 /dev/stmvl53l1_ranging    u:object_r:vl53l1_device:s0
 
 # HALs
-/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.lenovo_zippo              u:object_r:hal_fingerprint_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.lenovo_zippo                                u:object_r:hal_light_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.neuralnetworks@1\.1-service-qti                                 u:object_r:hal_neuralnetworks_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.secure_element@1\.1-service                                     u:object_r:hal_secure_element_default_exec:s0
