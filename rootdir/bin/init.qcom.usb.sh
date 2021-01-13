@@ -51,14 +51,12 @@ fi
 # Override USB default composition
 #
 # If USB persist config not set, set default configuration
+build_type=`getprop ro.build.type`
 if [ "$(getprop persist.vendor.usb.config)" == "" -a \
 	"$(getprop init.svc.vendor.usb-gadget-hal-1-0)" != "running" ]; then
     if [ "$esoc_name" != "" ]; then
 	  setprop persist.vendor.usb.config diag,diag_mdm,qdss,qdss_mdm,serial_cdev,dpl,rmnet,adb
-	  #BSP add for 5G diag port config
-	  setprop persist.vendor.sdx50m.online 1
-      else
-          setprop persist.vendor.sdx50m.online 0
+    else
 	  case "$(getprop ro.baseband)" in
 	      "apq")
 	          setprop persist.vendor.usb.config diag,adb
@@ -109,7 +107,9 @@ if [ "$(getprop persist.vendor.usb.config)" == "" -a \
 		          setprop persist.vendor.usb.config diag,serial_cdev,rmnet,dpl,adb
 		      ;;
 	              "msmnile" | "sm6150" | "trinket" | "lito")
-			  setprop persist.vendor.usb.config diag,serial_cdev,rmnet,dpl,qdss,adb
+		          if [ "$build_type" != "user" ]; then
+			      setprop persist.vendor.usb.config diag,serial_cdev,rmnet,dpl,qdss,adb
+			  fi
 		      ;;
 	              *)
 		          setprop persist.vendor.usb.config diag,adb
@@ -154,26 +154,21 @@ fi
 # check configfs is mounted or not
 if [ -d /config/usb_gadget ]; then
 	# Chip-serial is used for unique MSM identification in Product string
-	msm_serial=`cat /sys/devices/soc0/serial_number`;
-	msm_serial_hex=`printf %08X $msm_serial`
-	machine_type=`cat /sys/devices/soc0/machine`
-#ifdef VENDOR_EDIT
-#Fix product name for Android Auto/Ubuntu
-	product_string=`getprop ro.product.model`
-        if [ "$product_string" == "" ]; then
-	        product_string="OnePlus"
-        fi
-#else
-	#product_string="$machine_type-$soc_hwplatform _SN:$msm_serial_hex"
-#endif
-	echo "$product_string" > /config/usb_gadget/g1/strings/0x409/product
-
+	product_usb=`cat /config/usb_gadget/g1/strings/0x409/product` 2> /dev/null
+	if [ "$product_usb" == "" ]; then
+		msm_serial=`cat /sys/devices/soc0/serial_number`;
+		msm_serial_hex=`printf %08X $msm_serial`
+		machine_type=`cat /sys/devices/soc0/machine`
+		product_string="$machine_type-$soc_hwplatform _SN:$msm_serial_hex"
+		echo "$product_string" > /config/usb_gadget/g1/strings/0x409/product
+	fi
 	# ADB requires valid iSerialNumber; if ro.serialno is missing, use dummy
 	serialnumber=`cat /config/usb_gadget/g1/strings/0x409/serialnumber 2> /dev/null`
 	if [ "$serialnumber" == "" ]; then
 		serialno=1234567
 		echo $serialno > /config/usb_gadget/g1/strings/0x409/serialnumber
 	fi
+	setprop vendor.usb.configfs 1
 fi
 
 #
@@ -191,17 +186,6 @@ case "$soc_id" in
 		setprop vendor.usb.rps_mask 40
 	;;
 esac
-
-#ifdef VENDOR_EDIT
-#@BSP, 20171114 Enable diag and adb for FTM
-boot_mode=`getprop ro.boot.ftm_mode`
-echo "boot_mode: $boot_mode" > /dev/kmsg
-case "$boot_mode" in
-    "ftm_at" | "ftm_rf" | "ftm_wlan" | "ftm_mos")
-    setprop sys.usb.config diag,adb
-    echo "AFTER boot_mode: diag,adb" > /dev/kmsg
-esac
-#endif
 
 #
 # Initialize UVC conifguration.
@@ -258,15 +242,3 @@ if [ -d /config/usb_gadget/g1/functions/uvc.0 ]; then
 	ln -s streaming/header/h streaming/class/hs/
 	ln -s streaming/header/h streaming/class/ss/
 fi
-
-#ifdef VENDOR_EDIT
-#david.liu@bsp, 20171114 Enable diag and adb for FTM
-boot_mode=`getprop ro.boot.ftm_mode`
-echo "boot_mode: $boot_mode" > /dev/kmsg
-case "$boot_mode" in
-    "ftm_at" | "ftm_rf" | "ftm_wlan" | "ftm_mos")
-    setprop sys.usb.config diag,adb
-    echo "AFTER boot_mode: diag,adb" > /dev/kmsg
-esac
-#endif
-

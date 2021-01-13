@@ -166,7 +166,14 @@ PRODUCT_PACKAGES += \
     init.qti.ims.sh \
     init.recovery.qcom.rc \
     init.target.rc \
+    fstab.qcom \
     ueventd.rc
+
+PRODUCT_PACKAGES += \
+    init.lenovo.common.rc \
+    init.lenovo.rc \
+    init.lenovo.usb.configfs.rc \
+    init.qcom.performance.rc
 
 # Cryptfshw
 PRODUCT_PACKAGES += \
