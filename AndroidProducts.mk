@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/revengeos_zippo.mk
+    $(LOCAL_DIR)/octavi_zippo.mk
