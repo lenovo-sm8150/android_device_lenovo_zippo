@@ -3,3 +3,16 @@ hal_server_domain(hal_fod_lenovo_zippo, hal_lineage_fod)
 
 type hal_fod_lenovo_zippo_exec, system_file_type, exec_type, file_type;
 init_daemon_domain(hal_fod_lenovo_zippo)
+
+# Allow access to the HALs
+hal_client_domain(hal_fod_lenovo_zippo, hal_fingerprint)
+
+# Allow binder communication with hal_fingerprint
+binder_call(hal_fod_lenovo_zippo, hal_fingerprint)
+
+# Allow hal_fod_lenovo_zippo to hal_fingerprint_hwservice
+allow hal_fod_lenovo_zippo hal_fingerprint_hwservice:hwservice_manager find;
+
+# Allow hal_fod_lenovo_zippo to read/write files in sysfs_graphics for brightness
+allow hal_fod_lenovo_zippo sysfs_graphics:dir r_dir_perms;
+allow hal_fod_lenovo_zippo sysfs_graphics:file rw_file_perms;
