@@ -1,3 +1,5 @@
+# Device proprietary files - from zippo's ZUI package L78051_SECURE_USER_11.5.381_ST_200603
+
 # Alarm
 -product/app/PowerOffAlarm/PowerOffAlarm.apk
 
@@ -33,10 +35,6 @@ system/etc/cne/Nexus/VZW/VZW_profiles.xml
 # Configstore
 -vendor/lib/libplatformconfig.so
 -vendor/lib64/libplatformconfig.so
-
-# Diag
-product/lib64/libdiag_system.so
-product/lib/libdiag_system.so
 
 # DPM
 product/bin/dpmd
@@ -121,6 +119,8 @@ product/lib64/vendor.qti.ims.rcsconfig@1.0.so
 product/lib64/vendor.qti.imsrtpservice@2.0.so
 product/lib64/vendor.qti.imsrtpservice@2.1.so
 system/etc/permissions/com.qualcomm.qti.imscmservice.xml
+system/lib64/libdiag_system.so
+system/lib/libdiag_system.so
 
 # Input
 system/etc/excluded-input-devices.xml
