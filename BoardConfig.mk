@@ -128,12 +128,6 @@ BOARD_RECOVERYIMAGE_PARTITION_SIZE := 100663296
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 5368709120
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 57453555712
 BOARD_ROOT_EXTRA_FOLDERS := metadata
-BOARD_ROOT_EXTRA_SYMLINKS := \
-    /mnt/vendor/persist:/persist \
-    /vendor/bt_firmware:/bt_firmware \
-    /vendor/dsp:/dsp \
-    /vendor/firmware_mnt:/firmware
-
 TARGET_COPY_OUT_VENDOR := vendor
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USES_MKE2FS := true
