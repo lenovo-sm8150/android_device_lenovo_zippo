@@ -19,9 +19,6 @@ PRODUCT_PACKAGES += \
     update_engine_sideload \
     update_verifier
 
-PRODUCT_PACKAGES += \
-    bootctrl.$(PRODUCT_PLATFORM).recovery
-
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
     POSTINSTALL_PATH_system=system/bin/otapreopt_script \
@@ -30,8 +27,8 @@ AB_OTA_POSTINSTALL_CONFIG += \
 
 # Boot control HAL
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0-impl.recovery \
-    android.hardware.boot@1.0-service
+    android.hardware.boot@1.1-impl.recovery \
+    bootctrl.$(PRODUCT_PLATFORM).recovery
 
 PRODUCT_COPY_FILES += \
     $(OUT_DIR)/target/product/$(PRODUCT_RELEASE_NAME)/obj/SHARED_LIBRARIES/libandroidicu_intermediates/libandroidicu.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libandroidicu.so
