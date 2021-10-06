@@ -88,6 +88,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 
 TARGET_NO_KERNEL := false
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
+BOARD_ROOT_EXTRA_FOLDERS := batinfo
 
 # Workaround for error copying vendor files to recovery ramdisk
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4

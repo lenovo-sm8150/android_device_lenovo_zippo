@@ -36,3 +36,7 @@ on post-fs
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+
+    wait /dev/block/bootdevice/by-name/logdump
+    exec /system/bin/e2fsck -p /dev/block/bootdevice/by-name/logdump
+    mount ext4 /dev/block/bootdevice/by-name/logdump /batinfo nosuid nodev noatime barrier=1
