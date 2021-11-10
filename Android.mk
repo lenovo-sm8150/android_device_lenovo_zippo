@@ -25,7 +25,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),I01WD)
+ifeq ($(TARGET_DEVICE),zippo)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 

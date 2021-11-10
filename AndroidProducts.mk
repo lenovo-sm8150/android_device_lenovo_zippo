@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_I01WD.mk
+    $(LOCAL_DIR)/twrp_zippo.mk
