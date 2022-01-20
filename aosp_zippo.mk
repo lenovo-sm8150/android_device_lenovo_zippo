@@ -12,6 +12,7 @@ $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 # PixelExperience Properties
 TARGET_GAPPS_ARCH := arm64
 TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_SUPPORTS_QUICK_TAP := true
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_BRAND := Lenovo
