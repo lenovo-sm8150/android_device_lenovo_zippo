@@ -6,8 +6,8 @@
 
 $(call inherit-product, device/lenovo/zippo/device.mk)
 
-# Inherit some common PixelExperience stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Inherit some common Arrow stuff.
+$(call inherit-product, vendor/arrow/config/common.mk)
 
 # PixelExperience Properties
 TARGET_GAPPS_ARCH := arm64
@@ -19,7 +19,7 @@ PRODUCT_BRAND := Lenovo
 PRODUCT_DEVICE := zippo
 PRODUCT_MANUFACTURER := Lenovo
 PRODUCT_MODEL := Lenovo L78051
-PRODUCT_NAME := aosp_zippo
+PRODUCT_NAME := arrow_zippo
 
 PRODUCT_GMS_CLIENTID_BASE := android-lenovo
 
