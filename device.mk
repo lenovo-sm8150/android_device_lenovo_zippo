@@ -23,10 +23,10 @@ PRODUCT_PACKAGES += \
    Snap
 
 # FM
-PRODUCT_PACKAGES += \
-    FM2 \
-    libqcomfm_jni \
-    qcom.fmradio
+#PRODUCT_PACKAGES += \
+#    FM2 \
+#    libqcomfm_jni \
+#    qcom.fmradio
 
 # Sensors
 PRODUCT_PACKAGES += \
