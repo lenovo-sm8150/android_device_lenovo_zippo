@@ -1,25 +1,23 @@
 #
-# Copyright (C) 2019 The LineageOS Project
+# Copyright (C) 2022 The Xtended Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 $(call inherit-product, device/lenovo/zippo/device.mk)
 
-# Inherit some common Arrow stuff.
-$(call inherit-product, vendor/arrow/config/common.mk)
-
-# PixelExperience Properties
-TARGET_GAPPS_ARCH := arm64
+# Inherit some common Xtended stuff.
+$(call inherit-product, vendor/xtended/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_SUPPORTS_QUICK_TAP := true
+XTENDED_BUILD_TYPE := OFFICIAL
+XTENDED_BUILD_MAINTAINER := EinarG. 
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_BRAND := Lenovo
 PRODUCT_DEVICE := zippo
 PRODUCT_MANUFACTURER := Lenovo
 PRODUCT_MODEL := Lenovo L78051
-PRODUCT_NAME := arrow_zippo
+PRODUCT_NAME := xtended_zippo
 
 PRODUCT_GMS_CLIENTID_BASE := android-lenovo
 

@@ -1,13 +1,13 @@
 #
-# Copyright (C) 2019-2021 The LineageOS Project
+# Copyright (C) 2022 The Xtended Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/arrow_zippo.mk
+    $(LOCAL_DIR)/xtended_zippo.mk
 
 COMMON_LUNCH_CHOICES := \
-    arrow_zippo-user \
-    arrow_zippo-userdebug \
-    arrow_zippo-eng
+    xtended_zippo-user \
+    xtended_zippo-userdebug \
+    xtended_zippo-eng
