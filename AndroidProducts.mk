@@ -1,13 +1,13 @@
 #
-# Copyright (C) 2022 The Xtended Project
+# Copyright (C) 2022 The Derpfest Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/xtended_zippo.mk
+    $(LOCAL_DIR)/derp_zippo.mk
 
 COMMON_LUNCH_CHOICES := \
-    xtended_zippo-user \
-    xtended_zippo-userdebug \
-    xtended_zippo-eng
+    derp_zippo-user \
+    derp_zippo-userdebug \
+    derp_zippo-eng
