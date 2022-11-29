@@ -23,6 +23,8 @@ DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 ifeq ($(TARGET_PREBUILT_KERNEL),)
   TARGET_KERNEL_CONFIG := lineage_zippo_defconfig
   TARGET_KERNEL_CLANG_COMPILE := true
+  TARGET_KERNEL_CLANG_VERSION := trb_clang
+  TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/$(TARGET_KERNEL_CLANG_VERSION)
   TARGET_KERNEL_SOURCE := kernel/lenovo/sm8150
 endif
 
