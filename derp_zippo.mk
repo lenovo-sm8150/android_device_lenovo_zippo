@@ -9,11 +9,10 @@ $(call inherit-product, device/lenovo/zippo/device.mk)
 # Inherit some common Derpfest stuff.
 $(call inherit-product, vendor/derp/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_GAPPS_ARCH := arm64
 IS_PHONE := true
 TARGET_SUPPORTS_GOOGLE_RECORDER := false
 DERP_BUILDTYPE := Official
-EXTRA_UDFPS_ANIMATIONS := true
+USE_LEGACY_BOOTANIMATION := true
 
 # Enable quick tap
 TARGET_SUPPORTS_QUICK_TAP := true
